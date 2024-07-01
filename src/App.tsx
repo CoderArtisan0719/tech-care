@@ -2,6 +2,8 @@ import Header from './components/Header';
 import { Patients } from './sections/patients';
 import DiagnosisHisory from './sections/diagnosis-history/Chart';
 import DiagnosticList from './sections/diagnostic-list/DiagnosticList';
+import { PatientDetails } from './sections/patient-detail';
+import { LabResults } from './sections/lab-results';
 
 function App() {
   return (
@@ -13,9 +15,9 @@ function App() {
           <DiagnosisHisory />
           <DiagnosticList />
         </div>
-        <div className='flex-column w-[23%] p-5 rounded-[16px] bg-white'>
-          <DiagnosisHisory />
-          <DiagnosticList />
+        <div className='flex flex-col gap-8 w-[23%]'>
+          <PatientDetails />
+          <LabResults />
         </div>
       </div>
     </div>
