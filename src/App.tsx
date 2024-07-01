@@ -9,7 +9,7 @@ function App() {
       <Header />
       <div className='flex w-full mt-9 gap-8'>
         <SideBar className="w-[23%]" />
-        <div className='flex-column'>
+        <div className="flex flex-col flex-grow w-[calc(54%-32px)] bg-red-300">
           <DiagnosisHisory />
           <DiagnosticList />
         </div>
