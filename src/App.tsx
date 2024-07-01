@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 import Header from './components/Header';
-import SideBar from './sections/patients/Sidebar';
+import { Patients } from './sections/patients';
+import { PatientDetails } from './sections/patient-detail';
+import { LabResults } from './sections/lab-results';
 import { fetchPatientData } from './services/api';
 
 import Diagnosis from './sections/diagnosis';
@@ -29,7 +31,7 @@ function App() {
     <div className="relative w-full h-full p-[18px]">
       <Header />
       <div className='flex w-full mt-9 gap-8'>
-        <SideBar className="w-[23%]" />
+        <Patients className="w-[23%]" />
         <div className="flex flex-col flex-grow w-[calc(54%-32px)]">
           {patient && (
             <>
@@ -37,8 +39,9 @@ function App() {
             </>
           )}
         </div>
-        <div className='flex-column w-[23%] p-5 rounded-[16px] bg-white'>
-          <h2>Right bar</h2>
+        <div className='flex flex-col gap-8 w-[23%]'>
+          <PatientDetails />
+          <LabResults />
         </div>
       </div>
     </div>
