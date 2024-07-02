@@ -41,7 +41,6 @@ const DiagnosisHistoryChart: React.FC<DiagnosisHistoryChartProps> = ({ data }) =
   // Get the last 6 months of data
   const filteredData = sortedData.slice(-6);
 
-  // Transform the data to fit the chart format
   const labels = filteredData.map(entry =>
     new Date(`${entry.year}-${entry.month}-01`).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
   );
@@ -120,7 +119,7 @@ const DiagnosisHistoryChart: React.FC<DiagnosisHistoryChartProps> = ({ data }) =
   };
 
   return (
-    <div className="bg-[#F4F0FE] rounded-lg p-6 flex flex-col lg:flex-row">
+    <div className="bg-[#F4F0FE] rounded-2xl p-4 flex flex-col lg:flex-row">
       <div className="flex-1">
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg font-medium text-gray-700">Blood Pressure</h3>
@@ -129,7 +128,7 @@ const DiagnosisHistoryChart: React.FC<DiagnosisHistoryChartProps> = ({ data }) =
             <img src="/images/line-arrow-down.png" alt="line arrow down" className='ml-2' />
           </div>
         </div>
-        <div className="relative h-64">
+        <div className="relative h-[192px]">
           <Line data={chartData} options={options} />
         </div>
       </div>
@@ -137,7 +136,7 @@ const DiagnosisHistoryChart: React.FC<DiagnosisHistoryChartProps> = ({ data }) =
         <div className="mb-4">
           <div className="flex items-center">
             <span className="inline-block w-3 h-3 bg-pink-500 rounded-full mr-2"></span>
-            <span className="text-pink-500">Systolic</span>
+            <span className="text-[#072635]">Systolic</span>
           </div>
           <strong className="text-2xl text-gray-800">160</strong>
           <div className="flex items-center text-gray-500">
@@ -148,7 +147,7 @@ const DiagnosisHistoryChart: React.FC<DiagnosisHistoryChartProps> = ({ data }) =
         <div className='pt-4'>
           <div className="flex items-center">
             <span className="inline-block w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
-            <span className="text-blue-500">Diastolic</span>
+            <span className="text-[#072635]">Diastolic</span>
           </div>
           <strong className="text-2xl text-gray-800">78</strong>
           <div className="flex items-center text-gray-500">

@@ -1,4 +1,4 @@
-export const patients = [
+export const patientsList = [
     {
       name: 'Emily Williams',
       gender: 'Female',
